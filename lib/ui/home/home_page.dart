@@ -11,10 +11,11 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.settings),
             onPressed: () {
-              // Navigate to the PreferencePage
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => PreferencePage(),
-              ));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => PreferencePage(),
+                ),
+              );
             },
           )
         ],
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
         child: Container(
           child: Text(
             'Home',
-            style: Theme.of(context).textTheme.display1,
+            style: Theme.of(context).textTheme.headline1,
           ),
         ),
       ),

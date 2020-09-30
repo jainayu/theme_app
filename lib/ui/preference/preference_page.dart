@@ -15,18 +15,18 @@ class PreferencePage extends StatelessWidget {
       body: ListView.builder(
         padding: EdgeInsets.all(8),
         itemCount: AppTheme.values.length,
-        itemBuilder: (context, index) {          
+        itemBuilder: (context, index) {
           final itemAppTheme = AppTheme.values[index];
           return Card(
-            color: appThemeData[itemAppTheme].primaryColor,
+            color: appThemeData[itemAppTheme].accentColor,
             child: ListTile(
               title: Text(
                 itemAppTheme.toString(),
-                style: appThemeData[itemAppTheme].textTheme.body1,
+                style: appThemeData[itemAppTheme].textTheme.bodyText1,
               ),
               onTap: () {
                 BlocProvider.of<ThemeBloc>(context)
-                    .dispatch(ThemeChanged(theme: itemAppTheme));
+                    .add(ThemeChanged(theme: itemAppTheme));
               },
             ),
           );

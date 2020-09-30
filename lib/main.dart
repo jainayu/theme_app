@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:myapp/ui/global/theme/bloc/theme_bloc.dart';
+import 'package:myapp/ui/home/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,11 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: state.themeData,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Title"),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
